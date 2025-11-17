@@ -6,7 +6,7 @@ export const Footer = () => {
   const socialMedia = [
     {
       name: "Instagram",
-      href: "https://www.instagram.com/shironxn/",
+      href: "https://www.instagram.com/shironxn",
       icon: InstagramIcon,
     },
   ];

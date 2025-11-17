@@ -8,6 +8,12 @@ import {
 import Link from "next/link";
 import { ComponentProps } from "react";
 
+const navLinks = [
+  { name: "Beranda", href: "/" },
+  { name: "Tentang", href: "#about" },
+  { name: "Karya", href: "#works" },
+];
+
 export const NavMenu = ({
   props,
   setIsMobileMenuOpen,
@@ -15,11 +21,6 @@ export const NavMenu = ({
   props: ComponentProps<typeof NavigationMenu>;
   setIsMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const navLinks = [
-    { name: "Beranda", href: "/" },
-    { name: "Tentang", href: "#about" },
-    { name: "Karya", href: "#works" },
-  ];
   return (
     <NavigationMenu {...props}>
       <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start">

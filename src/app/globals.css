@@ -114,7 +114,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 font-plus-jakarta-sans;
+    @apply border-border outline-ring/50 scroll-smooth font-plus-jakarta-sans;
   }
   body {
     @apply bg-background text-foreground;
