@@ -12,10 +12,12 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="gap-2 border-t p-4 text-sm">
+    <footer className="gap-2 border-t p-4">
       <div className="container flex justify-between">
         <Logo />
-        <p>© {new Date().getFullYear()} Shiron Studio. All rights reserved.</p>
+        <p className="text-sm">
+          © {new Date().getFullYear()} Shiron Studio. All rights reserved.
+        </p>
         <div>
           {socialMedia.map((item, index) => (
             <Link key={index} href={item.href}>
