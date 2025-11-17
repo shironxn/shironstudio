@@ -7,26 +7,27 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { Separator } from "../ui/separator";
 
 const projects = [
   {
     title: "Kahuripan Poles Lantai",
     description:
-      "Website landing page cepat & modern untuk UMKM yang ingin tampil profesional.",
+      "Website profesional untuk jasa poles lantai marmer, granit, dan teraso.",
     image: "/projects/1.png",
     url: "kahuripanpoleslantai.com",
   },
   {
     title: "Freedom Cup of 48",
     description:
-      "Website landing page cepat & modern untuk UMKM yang ingin tampil profesional.",
+      "Platform kompetisi siswa dengan berbagai cabang lomba dan pendaftaran online.",
     image: "/projects/2.png",
     url: "freedomof48.com",
   },
   {
     title: "MPK-OSIS SMA Negeri 48 Jakarta",
     description:
-      "Website landing page cepat & modern untuk UMKM yang ingin tampil profesional.",
+      "Website organisasi siswa menampilkan profil dan program kerja terupdate.",
     image: "/projects/3.png",
     url: "mpkosis-sman48jkt.id",
   },
@@ -50,23 +51,23 @@ export const WorksSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((item, index) => {
           return (
-            <Link key={index} href={`https://${item.url}`} target="_blank">
-              <Card className="shadow-none border border-border/60 hover:shadow-md transition-all rounded-2xl bg-background/60 backdrop-blur-sm py-0">
+            <Card key={index} className="shadow-none border-none">
+              <Link href={`https://${item.url}`} target="_blank">
                 <CardContent className="aspect-video px-0 py-0 h-fit relative">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="rounded-t-2xl"
+                    className="rounded-2xl"
                   />
                 </CardContent>
+              </Link>
 
-                <CardHeader className="py-5 px-6 flex flex-row items-center gap-3">
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            </Link>
+              <CardHeader className="px-0 py-8 flex flex-row items-center gap-3 border-t">
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription>{item.description}</CardDescription>
+              </CardHeader>
+            </Card>
           );
         })}
       </div>
