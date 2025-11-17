@@ -124,6 +124,14 @@
   h3 {
     @apply font-playfair-display;
   }
+
+  h1 {
+    @apply font-bold text-5xl lg:text-6xl;
+  }
+
+  p {
+    @apply text-xl lg:text-lg leading-relaxed;
+  }
 }
 
 @utility container {

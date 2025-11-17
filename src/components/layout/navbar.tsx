@@ -1,7 +1,10 @@
+"use client";
+
 import { Logo } from "@/components/layout/logo";
 import { NavigationSheet } from "@/components/layout/navigation-sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const contact = {
   phone: "62895392167612",
@@ -10,8 +13,21 @@ const contact = {
 };
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 180);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
   return (
-    <nav className="bg-background py-4 fixed w-full z-50">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transistion-all duration-300 w-full ${isScrolled ? "bg-background/95 backdrop-blur-lg shadow py-3" : "bg-transparent py-6"}`}
+    >
       <div className="h-full flex items-center justify-between max-w-(--breakpoint-xl) mx-auto px-4 sm:px-6 lg:px-8">
         <Logo />
 

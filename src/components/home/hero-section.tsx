@@ -8,9 +8,9 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <section className="min-h-screen flex items-center justify-center py-32">
       <div className="container grid lg:grid-cols-2 gap-12">
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between gap-4">
           <div>
             <Badge
               variant="secondary"
@@ -18,11 +18,11 @@ const HeroSection = () => {
             >
               Kami ada disini.
             </Badge>
-            <h1 className="mt-6 max-w-[17ch] text-6xl font-bold leading-[1.2]!">
+            <h1 className="mt-6 max-w-[17ch]  leading-[1.2]!">
               Solusi digital untuk bisnis anda.
             </h1>
           </div>
-          <Link href="#works" className="flex gap-2 text-lg">
+          <Link href="#works" className="flex gap-2 text-xl lg:text-lg">
             Lihat Karya Kami <ChevronDownCircleIcon />
           </Link>
         </div>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           <Lottie animationData={animation} loop />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
