@@ -32,9 +32,9 @@ const projects = [
   },
 ];
 
-export const WorksSection = () => {
+export const ProjectSection = () => {
   return (
-    <section id="works" className="container py-32 space-y-16">
+    <section id="project" className="container py-32 space-y-16">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h2 className="text-4xl font-bold tracking-tight">Projek Kami</h2>
