@@ -37,7 +37,7 @@ const Navbar = () => {
               href={`https://wa.me/${contact.phone}?text=${encodeURI(contact.message)}`}
               target="_blank"
             >
-              Kontak
+              Hubungi Kami
             </Link>
           </Button>
 

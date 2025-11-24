@@ -5,13 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  CheckIcon,
-  CheckLineIcon,
-  GlobeIcon,
-  VideoIcon,
-  XIcon,
-} from "lucide-react";
+import { CheckIcon, GlobeIcon, VideoIcon, XIcon } from "lucide-react";
 
 const services = [
   {
@@ -24,7 +18,7 @@ const services = [
       "Website satu halaman yang menarik untuk promosi produk atau layanan Anda.",
     features: [
       "1 Halaman Landing Page profesional",
-      "Hosting GRATIS dengan Vercel",
+      "Hosting GRATIS",
       "Responsive Design",
       "SEO Basic Optimization",
       "Contact Form Sederhana",
@@ -41,7 +35,7 @@ const services = [
   {
     icon: VideoIcon,
     title: "Video Editing",
-    price: "Rp 150.000 - 550.000",
+    price: "Rp 130.000 - 500.000",
     originalPrice: "",
     duration: "-",
     description:

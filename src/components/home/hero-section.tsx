@@ -22,7 +22,7 @@ const HeroSection = () => {
               Solusi digital untuk bisnis anda.
             </h1>
           </div>
-          <Link href="#works" className="flex gap-2 text-xl lg:text-lg">
+          <Link href="#project" className="flex gap-2 text-xl lg:text-lg">
             Lihat Karya Kami <ChevronDownCircleIcon />
           </Link>
         </div>
