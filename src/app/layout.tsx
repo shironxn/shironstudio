@@ -1,9 +1,9 @@
+import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/layout/footer";
-import { Toaster } from "@/components/ui/sonner";
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -16,27 +16,34 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Shiron Studio - Jasa Pembuatan Website Profesional untuk UMKM",
+  metadataBase: new URL("https://shironstudio.com"),
+  title: {
+    default: "Shiron Studio — Jasa Website & Konten Digital untuk UMKM",
+    template: "%s | Shiron Studio",
+  },
   description:
-    "Shiron Studio menyediakan jasa pembuatan website, desain grafis, dan konten digital untuk UMKM dengan harga terjangkau. Hasil profesional, proses cepat, dan gratis konsultasi.",
-  keywords:
-    "jasa pembuatan website, website UMKM, desain grafis, editing konten, digital agency, website murah, website profesional",
+    "Shiron Studio menyediakan jasa pembuatan website, desain, dan konten digital profesional untuk UMKM. Harga terjangkau, proses cepat, dan gratis konsultasi.",
+  keywords: [
+    "jasa pembuatan website",
+    "website UMKM",
+    "jasa editing video",
+    "landing page murah",
+    "digital agency",
+    "website profesional",
+    "jasa landing page",
+  ],
   authors: [{ name: "Shiron Studio" }],
   creator: "Shiron Studio",
   publisher: "Shiron Studio",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://shironstudio.vercel.app"),
+
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
-    title: "Shiron Studio - Jasa Website Profesional untuk UMKM",
+    title: "Shiron Studio — Solusi Digital Modern untuk UMKM",
     description:
-      "Bikin website UMKM kamu jadi profesional dan modern dengan harga terjangkau. Cepat, simple, dan hasil memuaskan.",
+      "Bikin website UMKM kamu lebih profesional dengan harga terjangkau. Modern, cepat, dan responsif.",
     url: "https://shironstudio.com",
     siteName: "Shiron Studio",
     images: [
@@ -44,19 +51,27 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Shiron Studio - Digital Service Studio",
+        alt: "Shiron Studio | Digital Service Studio",
       },
     ],
     locale: "id_ID",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Shiron Studio - Jasa Website Profesional untuk UMKM",
+    title: "Shiron Studio — Solusi Digital untuk UMKM",
     description:
-      "Bikin website UMKM kamu jadi profesional dan modern dengan harga terjangkau.",
+      "Jasa pembuatan website, desain visual, dan konten digital. Cepat, modern, terjangkau.",
     images: ["/og-image.jpg"],
   },
+
+  formatDetection: {
+    email: false,
+    telephone: false,
+    address: false,
+  },
+
   robots: {
     index: true,
     follow: true,
