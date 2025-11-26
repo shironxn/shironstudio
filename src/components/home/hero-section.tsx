@@ -16,7 +16,7 @@ const HeroSection = () => {
               variant="secondary"
               className="rounded-full px-4 py-2 border-border text-4xl"
             >
-              Kami ada disini.
+              Kami ada di sini.
             </Badge>
             <h1 className="mt-6 leading-[1.2]!">
               Solusi digital untuk bisnis anda.
