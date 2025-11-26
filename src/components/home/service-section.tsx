@@ -14,7 +14,7 @@ const services = [
     title: "Website Landing Page",
     price: "Rp 300.000",
     originalPrice: "Rp 600.000",
-    discountUntil: "1 November 2025",
+    discountUntil: "10 Desember 2025",
     duration: "3–5 hari kerja",
     description:
       "Landing page profesional untuk branding, promosi produk, atau portofolio dengan tampilan modern dan performa cepat.",
