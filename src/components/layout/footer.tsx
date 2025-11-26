@@ -2,15 +2,15 @@ import { Logo } from "@/components/layout/logo";
 import { InstagramIcon } from "lucide-react";
 import Link from "next/link";
 
-export const Footer = () => {
-  const socialMedia = [
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/shironstudio",
-      icon: InstagramIcon,
-    },
-  ];
+const socialMedia = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/shironstudio",
+    icon: InstagramIcon,
+  },
+];
 
+export const Footer = () => {
   return (
     <footer className="gap-2 border-t p-4">
       <div className="container flex justify-between">

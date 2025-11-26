@@ -6,12 +6,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const contact = {
-  phone: "62895392167612",
-  message:
-    "Halo Shiron Studio, saya ingin konsultasi layanan digital. Bisa dibantu?",
-};
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,12 +27,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <Button size="lg" asChild>
-            <Link
-              href={`https://wa.me/${contact.phone}?text=${encodeURI(contact.message)}`}
-              target="_blank"
-            >
-              Hubungi Kami
-            </Link>
+            <Link href="/#contact">Hubungi Kami</Link>
           </Button>
 
           <div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -81,6 +82,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Toaster />
         <Footer />
       </body>
     </html>
