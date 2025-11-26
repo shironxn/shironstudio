@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckIcon, GlobeIcon, VideoIcon, XIcon } from "lucide-react";
+import { Badge } from "../ui/badge";
 
 const services = [
   {
@@ -13,6 +14,7 @@ const services = [
     title: "Website Landing Page",
     price: "Rp 300.000",
     originalPrice: "Rp 600.000",
+    discountUntil: "1 November 2025",
     duration: "3–5 hari kerja",
     description:
       "Landing page profesional untuk branding, promosi produk, atau portofolio dengan tampilan modern dan performa cepat.",
@@ -40,6 +42,7 @@ const services = [
     title: "Video Editing",
     price: "Rp 130.000 – 500.000",
     originalPrice: "",
+    discountUntil: "",
     duration: "-",
     description:
       "Editing video profesional untuk konten TikTok, Instagram, Reels, YouTube, atau materi promosi brand Anda.",
@@ -79,7 +82,13 @@ const ServiceSection = () => {
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <item.icon className="w-7 h-7 text-primary" />
               </div>
+
+              {item.originalPrice && item.discountUntil && (
+                <Badge>Diskon sampai {item.discountUntil}</Badge>
+              )}
+
               <CardTitle className="text-xl">{item.title}</CardTitle>
+
               <div className="space-y-1">
                 {item.originalPrice ? (
                   <>
@@ -91,11 +100,12 @@ const ServiceSection = () => {
                     </p>
                   </>
                 ) : (
-                  <p className="text-2xl font-bold text-primary pt-4">
+                  <p className="text-2xl font-bold text-primary">
                     {item.price}
                   </p>
                 )}
               </div>
+
               <div className="text-sm text-muted-foreground flex items-center gap-2">
                 <span>⏱️ {item.duration}</span>
               </div>
