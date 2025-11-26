@@ -9,7 +9,7 @@ const POST = async (request: Request) => {
     const { name, phoneNumber, service, message } = body;
 
     const { data, error } = await resend.emails.send({
-      from: "noreply@shironstudio.com",
+      from: "customer@shironstudio.com",
       to: "shironstudio@proton.me",
       subject: `Pesan Baru dari ${name} — ${service}`,
       react: EmailTemplate({ name, phoneNumber, service, message }),
