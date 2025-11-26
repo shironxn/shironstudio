@@ -15,14 +15,14 @@ const ContactSection = () => {
     >
       <div className="flex flex-col justify-between gap-8">
         <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-4xl font-bold">Hubungi Kami</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <h2>Hubungi Kami</h2>
+          <p>
             Jangan ragu untuk menghubungi kami. Kami siap membantu Anda untuk
             membangun website modern dan efisien tanpa biaya besar.
           </p>
         </div>
 
-        <div className="space-y-2 text-sm text-muted-foreground">
+        <div className="space-y-2">
           <Link
             href={`https://wa.me/${contact.phoneNumber.replaceAll(" ", "")}`}
             className="flex gap-2 hover:cursor-pointer hover:text-foreground transition-colors duration-300"

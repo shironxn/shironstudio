@@ -129,8 +129,12 @@
     @apply font-bold text-5xl lg:text-6xl;
   }
 
+  h2 {
+    @apply font-bold text-4xl lg:text-5xl;
+  }
+
   p {
-    @apply text-xl lg:text-lg leading-relaxed;
+    @apply text-lg xl:text-xl text-muted-foreground leading-relaxed;
   }
 }
 

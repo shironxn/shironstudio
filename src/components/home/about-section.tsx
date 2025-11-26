@@ -31,9 +31,9 @@ const values = [
 export const AboutSection = () => {
   return (
     <section id="about" className="container py-32 space-y-12">
-      <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-4xl font-bold">Tentang Kami</h2>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="md:text-center max-w-2xl mx-auto space-y-4">
+        <h2>Tentang Kami</h2>
+        <p>
           Studio kecil berbasis freelance yang fokus membantu usaha kecil
           memiliki website modern, cepat, dan efisien tanpa biaya besar. Kami
           percaya setiap bisnis, sekecil apapun, berhak tampil profesional di
@@ -41,7 +41,7 @@ export const AboutSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {values.map((item, index) => (
           <Card key={index} className="border-none shadow-none">
             <CardContent>

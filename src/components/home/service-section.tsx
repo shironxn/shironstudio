@@ -64,15 +64,15 @@ const services = [
 const ServiceSection = () => {
   return (
     <section id="service" className="container py-32 space-y-16">
-      <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-4xl font-bold">Yang Kami Tawarkan</h2>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="md:text-center max-w-2xl mx-auto space-y-4">
+        <h2>Yang Kami Tawarkan</h2>
+        <p>
           Solusi digital modern untuk bisnis skala kecil. Layanan kami dibuat
           dengan fokus pada kualitas, kecepatan, dan hasil yang konsisten.
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center gap-8">
+      <div className="grid md:grid-cols-2 gap-8">
         {services.map((item, index) => (
           <Card key={index} className="w-full flex flex-col">
             <CardHeader>

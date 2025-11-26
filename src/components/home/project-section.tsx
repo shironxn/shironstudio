@@ -35,19 +35,16 @@ const projects = [
 export const ProjectSection = () => {
   return (
     <section id="project" className="container py-32 space-y-16">
-      {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-4xl font-bold tracking-tight">Projek Kami</h2>
-
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="md:text-center max-w-2xl mx-auto space-y-4">
+        <h2>Projek Kami</h2>
+        <p>
           Beberapa contoh pekerjaan dan project digital yang telah kami buat
           untuk menunjukkan kualitas, konsistensi, dan pendekatan minimalis
           kami.
         </p>
       </div>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((item, index) => {
           return (
             <Card key={index} className="shadow-none border-none">
