@@ -22,20 +22,21 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 text-muted-foreground hover:cursor-pointer hover:text-foreground transition-colors duration-300">
           <Link
             href={`https://wa.me/${contact.phoneNumber.replaceAll(" ", "")}`}
-            className="flex gap-2 hover:cursor-pointer hover:text-foreground transition-colors duration-300"
+            className="flex gap-2 "
           >
             <PhoneIcon className="w-5 h-5" />
-            <p className="text-sm">{contact.phoneNumber}</p>
+            <p className="text-sm hover:cursor-pointer hover:text-foreground transition-colors duration-300">
+              {contact.phoneNumber}
+            </p>
           </Link>
-          <Link
-            href={`mailto:${contact.email}`}
-            className="flex gap-2 hover:cursor-pointer hover:text-foreground transition-colors duration-300"
-          >
+          <Link href={`mailto:${contact.email}`} className="flex gap-2">
             <MailIcon className="w-5 h-5" />
-            <p className="text-sm">{contact.email}</p>
+            <p className="text-sm hover:cursor-pointer hover:text-foreground transition-colors duration-300">
+              {contact.email}
+            </p>
           </Link>
         </div>
       </div>

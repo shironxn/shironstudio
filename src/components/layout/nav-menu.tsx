@@ -10,8 +10,9 @@ import { ComponentProps } from "react";
 
 const navLinks = [
   { name: "Beranda", href: "/" },
-  { name: "Tentang", href: "#about" },
+  { name: "Layanan", href: "#service" },
   { name: "Karya", href: "#project" },
+  { name: "Tentang", href: "#about" },
 ];
 
 export const NavMenu = ({
