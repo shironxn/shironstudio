@@ -43,11 +43,11 @@ export const AboutSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {values.map((item, index) => (
-          <Card key={index} className="border-none shadow-none">
-            <CardContent>
+          <Card key={index} className="border-none shadow-none p-0">
+            <CardContent className="p-0">
               <item.icon className="text-primary w-8 h-8" />
             </CardContent>
-            <CardHeader>
+            <CardHeader className="p-0">
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
             </CardHeader>

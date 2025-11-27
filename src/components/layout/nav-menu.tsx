@@ -24,12 +24,12 @@ export const NavMenu = ({
 }) => {
   return (
     <NavigationMenu {...props}>
-      <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start">
+      <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start gap-4">
         {navLinks.map((item, index) => (
           <NavigationMenuItem key={index}>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className="font-medium text-4xl md:text-6xl"
             >
               <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)}>
                 {item.name}
