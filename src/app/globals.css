@@ -108,14 +108,6 @@
 
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
-    background: linear-gradient(
-      135deg,
-      var(--foreground) 0%,
-      oklch(0.4 0.05 45) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
   h2 {
