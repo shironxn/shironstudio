@@ -14,11 +14,11 @@ const HeroSection = () => {
           <div className="space-y-4">
             <Badge
               variant="secondary"
-              className="rounded-full px-4 py-2 border-border text-4xl"
+              className="rounded-full px-4 py-2 border-border text-xl md:text-4xl"
             >
               Kami ada di sini.
             </Badge>
-            <h1 className="mt-6 leading-[1.2]!">
+            <h1 className="leading-[1.2]!">
               Solusi digital untuk bisnis anda.
             </h1>
           </div>
