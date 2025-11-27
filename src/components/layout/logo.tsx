@@ -1,1 +1,1 @@
-export const Logo = () => <h3 className="font-bold">Shiron Studio</h3>;
+export const Logo = () => <h3 className="text-xl">Shiron Studio</h3>;

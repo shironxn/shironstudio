@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex min-h-screen items-center py-32 md:py-24 overflow-hidden">
+    <section className="bg-white relative flex min-h-screen items-center py-32 md:py-24 overflow-hidden">
       <div className="container grid md:grid-cols-2 gap-16">
         <div className="flex flex-col justify-center space-y-8">
           <div className="space-y-4">

@@ -9,39 +9,38 @@ const contact = {
 
 const ContactSection = () => {
   return (
-    <section
-      id="contact"
-      className="container py-32 grid md:grid-cols-2 gap-24"
-    >
-      <div className="flex flex-col justify-between gap-8">
-        <div className="max-w-2xl mx-auto space-y-4">
-          <h2>Hubungi Kami</h2>
-          <p>
-            Jangan ragu untuk menghubungi kami. Kami siap membantu Anda untuk
-            membangun website modern dan efisien tanpa biaya besar.
-          </p>
+    <section id="contact" className="bg-white py-32">
+      <div className="container grid md:grid-cols-2 gap-24">
+        <div className="flex flex-col justify-between gap-8">
+          <div className="max-w-2xl mx-auto space-y-4">
+            <h2>Hubungi Kami</h2>
+            <p>
+              Jangan ragu untuk menghubungi kami. Kami siap membantu Anda untuk
+              membangun website modern dan efisien tanpa biaya besar.
+            </p>
+          </div>
+
+          <div className="space-y-2 text-muted-foreground hover:cursor-pointer hover:text-foreground transition-colors duration-300">
+            <Link
+              href={`https://wa.me/${contact.phoneNumber.replaceAll(" ", "")}`}
+              className="flex gap-2 "
+            >
+              <PhoneIcon className="w-5 h-5" />
+              <p className="text-sm hover:cursor-pointer hover:text-foreground transition-colors duration-300">
+                {contact.phoneNumber}
+              </p>
+            </Link>
+            <Link href={`mailto:${contact.email}`} className="flex gap-2">
+              <MailIcon className="w-5 h-5" />
+              <p className="text-sm hover:cursor-pointer hover:text-foreground transition-colors duration-300">
+                {contact.email}
+              </p>
+            </Link>
+          </div>
         </div>
 
-        <div className="space-y-2 text-muted-foreground hover:cursor-pointer hover:text-foreground transition-colors duration-300">
-          <Link
-            href={`https://wa.me/${contact.phoneNumber.replaceAll(" ", "")}`}
-            className="flex gap-2 "
-          >
-            <PhoneIcon className="w-5 h-5" />
-            <p className="text-sm hover:cursor-pointer hover:text-foreground transition-colors duration-300">
-              {contact.phoneNumber}
-            </p>
-          </Link>
-          <Link href={`mailto:${contact.email}`} className="flex gap-2">
-            <MailIcon className="w-5 h-5" />
-            <p className="text-sm hover:cursor-pointer hover:text-foreground transition-colors duration-300">
-              {contact.email}
-            </p>
-          </Link>
-        </div>
+        <ContactForm />
       </div>
-
-      <ContactForm />
     </section>
   );
 };

@@ -77,7 +77,7 @@ const ServiceSection = () => {
 
       <div className="grid md:grid-cols-2 gap-8">
         {services.map((item, index) => (
-          <Card key={index} className="w-full flex flex-col">
+          <Card key={index} className="w-full flex flex-col bg-white">
             <CardHeader>
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <item.icon className="w-7 h-7 text-primary" />

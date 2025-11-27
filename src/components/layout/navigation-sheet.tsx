@@ -23,8 +23,8 @@ export const NavigationSheet = () => {
       </VisuallyHidden>
 
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:size-16">
-          <Menu className="md:size-12" />
+        <Button variant="ghost" size="icon" className="md:size-14">
+          <Menu className="md:size-10" />
         </Button>
       </SheetTrigger>
       <SheetContent className="px-6 py-3 w-full max-w-full">

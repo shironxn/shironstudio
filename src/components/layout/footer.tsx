@@ -13,7 +13,7 @@ const socialMedia = [
 export const Footer = () => {
   return (
     <footer className="gap-2 border-t py-4">
-      <div className="container flex flex-wrap text-center justify-center md:text-start md:justify-between gap-2">
+      <div className="container flex flex-col md:flex-row text-center justify-center items-center md:text-start md:justify-between gap-2">
         <Logo />
         <p className="text-sm">
           © {new Date().getFullYear()} Shiron Studio. All rights reserved.

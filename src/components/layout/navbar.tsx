@@ -26,7 +26,7 @@ const Navbar = () => {
         <Logo />
 
         <div className="flex items-center gap-3">
-          <Button size="lg" asChild>
+          <Button size="lg" variant="accent" asChild>
             <Link href="/#contact">Hubungi Kami</Link>
           </Button>
 
