@@ -81,11 +81,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
-  }
-
-  * {
-    scroll-behavior: smooth;
+    @apply border-border outline-ring/50 scroll-smooth scroll-pt-20;
   }
 
   body {
@@ -107,7 +103,7 @@
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-8xl;
   }
 
   h2 {
@@ -121,14 +117,6 @@
   p {
     @apply text-base lg:text-lg text-muted-foreground leading-relaxed;
     max-width: 65ch;
-  }
-
-  :focus-visible {
-    @apply outline-2 outline-offset-2 outline-ring;
-  }
-
-  ::selection {
-    @apply bg-primary/20 text-foreground;
   }
 }
 

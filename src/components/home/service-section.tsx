@@ -66,8 +66,12 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <section id="service" className="container py-32 space-y-16">
-      <div className="md:text-center max-w-2xl mx-auto space-y-4">
+    <section
+      id="service"
+      className="container space-y-12 py-16 md:space-y-16 md:py-24 lg:py-32"
+    >
+      {/* Header Section */}
+      <div className="mx-auto max-w-2xl space-y-4 md:text-center">
         <h2>Yang Kami Tawarkan</h2>
         <p>
           Solusi digital modern untuk bisnis skala kecil. Layanan kami dibuat
@@ -75,56 +79,61 @@ const ServiceSection = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      {/* Services Grid */}
+      <div className="grid gap-8 md:grid-cols-2">
         {services.map((item, index) => (
-          <Card key={index} className="w-full flex flex-col bg-white">
+          <Card key={index} className="flex w-full flex-col bg-white">
             <CardHeader>
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <item.icon className="w-7 h-7 text-primary" />
+              {/* Icon */}
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <item.icon className="h-7 w-7 text-primary" />
               </div>
 
+              {/* Discount Badge */}
               {item.originalPrice && item.discountUntil && (
                 <Badge>Diskon sampai {item.discountUntil}</Badge>
               )}
 
-              <CardTitle className="text-xl">{item.title}</CardTitle>
+              {/* Title */}
+              <CardTitle>{item.title}</CardTitle>
 
+              {/* Price */}
               <div className="space-y-1">
                 {item.originalPrice ? (
                   <>
-                    <p className="text-sm text-muted-foreground line-through">
+                    <p className="line-through text-muted-foreground">
                       {item.originalPrice}
                     </p>
-                    <p className="text-2xl font-bold text-primary">
-                      {item.price}
-                    </p>
+                    <p className="font-bold text-primary">{item.price}</p>
                   </>
                 ) : (
-                  <p className="text-2xl font-bold text-primary">
-                    {item.price}
-                  </p>
+                  <p className="font-bold text-primary">{item.price}</p>
                 )}
               </div>
 
-              <div className="text-sm text-muted-foreground flex items-center gap-2">
+              {/* Duration */}
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <span>⏱️ {item.duration}</span>
               </div>
-              <CardDescription className="text-base mb-4">
-                {item.description}
-              </CardDescription>
+
+              {/* Description */}
+              <CardDescription>{item.description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 flex flex-col">
-              <ul className="space-y-2 mb-6 flex-1">
-                {item.features.map((item, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
-                    <CheckIcon className="text-primary mt-0.5" />
-                    <span>{item}</span>
+
+            <CardContent className="flex flex-1 flex-col">
+              {/* Features List */}
+              <ul className="mb-6 flex-1 space-y-2">
+                {item.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-start gap-2">
+                    <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span>{feature}</span>
                   </li>
                 ))}
-                {item.excluded.map((item, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
-                    <XIcon className="text-primary mt-0.5" />
-                    <span>{item}</span>
+
+                {item.excluded.map((excluded, excludedIndex) => (
+                  <li key={excludedIndex} className="flex items-start gap-2">
+                    <XIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span>{excluded}</span>
                   </li>
                 ))}
               </ul>

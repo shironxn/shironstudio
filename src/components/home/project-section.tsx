@@ -34,9 +34,10 @@ const projects = [
 
 export const ProjectSection = () => {
   return (
-    <section id="project" className="bg-white py-32">
-      <div className="container space-y-16">
-        <div className="md:text-center max-w-2xl mx-auto space-y-4">
+    <section id="project" className="bg-white py-16 md:py-24 lg:py-32">
+      <div className="container space-y-12 md:space-y-16">
+        {/* Header Section */}
+        <div className="mx-auto max-w-2xl space-y-4 md:text-center">
           <h2>Projek Kami</h2>
           <p>
             Beberapa contoh pekerjaan dan project digital yang telah kami buat
@@ -45,31 +46,30 @@ export const ProjectSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((item, index) => {
-            return (
-              <Card
-                key={index}
-                className="shadow-none border-none bg-transparent"
-              >
-                <Link href={`https://${item.url}`} target="_blank">
-                  <CardContent className="aspect-video px-0 py-0 h-fit relative">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="rounded-2xl"
-                    />
-                  </CardContent>
-                </Link>
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((item, index) => (
+            <Card
+              key={index}
+              className="border-none bg-transparent shadow-none"
+            >
+              <Link href={`https://${item.url}`} target="_blank">
+                <CardContent className="relative h-fit aspect-video p-0">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="rounded-2xl object-cover"
+                  />
+                </CardContent>
+              </Link>
 
-                <CardHeader className="px-0 py-8 flex flex-row items-center gap-3 border-t">
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            );
-          })}
+              <CardHeader className="flex flex-row items-center gap-3 border-t px-0 py-8">
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription>{item.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

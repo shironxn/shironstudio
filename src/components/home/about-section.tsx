@@ -28,10 +28,14 @@ const values = [
   },
 ];
 
-export const AboutSection = () => {
+const AboutSection = () => {
   return (
-    <section id="about" className="container py-32 space-y-12">
-      <div className="md:text-center max-w-2xl mx-auto space-y-4">
+    <section
+      id="about"
+      className="container space-y-12 py-16 md:py-24 lg:py-32"
+    >
+      {/* Header Section */}
+      <div className="mx-auto max-w-2xl space-y-4 md:text-center">
         <h2>Tentang Kami</h2>
         <p>
           Studio kecil berbasis freelance yang fokus membantu usaha kecil
@@ -41,12 +45,14 @@ export const AboutSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Values Grid */}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {values.map((item, index) => (
-          <Card key={index} className="border-none shadow-none p-0">
+          <Card key={index} className="border-none p-0 shadow-none">
             <CardContent className="p-0">
-              <item.icon className="text-primary w-8 h-8" />
+              <item.icon className="h-8 w-8 text-primary" />
             </CardContent>
+
             <CardHeader className="p-0">
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>

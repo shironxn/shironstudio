@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export const NavigationSheet = () => {
@@ -27,12 +28,28 @@ export const NavigationSheet = () => {
           <Menu className="md:size-10" />
         </Button>
       </SheetTrigger>
-      <SheetContent className="px-6 py-3 w-full max-w-full">
-        <Logo />
-        <NavMenu
-          props={{ orientation: "vertical", className: "mt-6 [&>div]:h-full" }}
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-        />
+
+      <SheetContent className="h-full w-full max-w-full py-8" side="top">
+        <div className="container relative h-full">
+          <div>
+            <Logo />
+            <NavMenu
+              props={{
+                orientation: "vertical",
+                className: "mt-8 md:mt-16 lg:mt-24 [&>div]:h-full",
+              }}
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+            />
+          </div>
+
+          <Image
+            src="/illustrations/work-space.svg"
+            alt="Work Space"
+            width={500}
+            height={500}
+            className="absolute bottom-0 right-8 max-w-[300px] md:max-w-[500px]"
+          />
+        </div>
       </SheetContent>
     </Sheet>
   );

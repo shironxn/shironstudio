@@ -3,7 +3,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { ComponentProps } from "react";
@@ -24,7 +23,7 @@ export const NavMenu = ({
 }) => {
   return (
     <NavigationMenu {...props}>
-      <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start gap-4">
+      <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start gap-2 md:gap-6">
         {navLinks.map((item, index) => (
           <NavigationMenuItem key={index}>
             <NavigationMenuLink

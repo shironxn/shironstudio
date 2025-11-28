@@ -9,10 +9,11 @@ const contact = {
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="bg-white py-32">
-      <div className="container grid md:grid-cols-2 gap-24">
+    <section id="contact" className="bg-white py-16 md:py-24 lg:py-32">
+      <div className="container grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
+        {/* Contact Info */}
         <div className="flex flex-col justify-between gap-8">
-          <div className="max-w-2xl mx-auto space-y-4">
+          <div className="space-y-4">
             <h2>Hubungi Kami</h2>
             <p>
               Jangan ragu untuk menghubungi kami. Kami siap membantu Anda untuk
@@ -23,21 +24,23 @@ const ContactSection = () => {
           <div className="space-y-2 text-muted-foreground">
             <Link
               href={`https://wa.me/${contact.phoneNumber.replaceAll(" ", "")}`}
-              className="flex gap-2 hover:cursor-pointer hover:underline"
+              className="flex gap-2 hover:underline"
             >
-              <PhoneIcon className="w-5 h-5" />
-              <p className="text-sm">{contact.phoneNumber}</p>
+              <PhoneIcon className="h-5 w-5" />
+              <p>{contact.phoneNumber}</p>
             </Link>
+
             <Link
               href={`mailto:${contact.email}`}
-              className="flex gap-2 hover:cursor-pointer hover:underline"
+              className="flex gap-2 hover:underline"
             >
-              <MailIcon className="w-5 h-5" />
-              <p className="text-sm">{contact.email}</p>
+              <MailIcon className="h-5 w-5" />
+              <p>{contact.email}</p>
             </Link>
           </div>
         </div>
 
+        {/* Contact Form */}
         <ContactForm />
       </div>
     </section>

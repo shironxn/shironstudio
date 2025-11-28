@@ -1,6 +1,6 @@
 "use client";
 
-import animation from "@/../public/hero-animation.json";
+import animation from "@/../public/illustrations/hero-animation.json";
 import { Badge } from "@/components/ui/badge";
 import Lottie from "lottie-react";
 import { ChevronDownCircleIcon } from "lucide-react";
@@ -8,27 +8,29 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white relative flex min-h-screen items-center py-32 md:py-24 overflow-hidden">
-      <div className="container grid md:grid-cols-2 gap-16">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-white py-24 md:py-32 lg:py-40">
+      <div className="container grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
+        {/* Hero Content */}
         <div className="flex flex-col justify-center space-y-8">
           <div className="space-y-4">
             <Badge
               variant="secondary"
-              className="rounded-full px-4 py-2 border-border text-xl md:text-4xl"
+              className="text-xl md:text-3xl rounded-full border-border px-4 py-2"
             >
               Kami ada di sini.
             </Badge>
-            <h1 className="leading-[1.2]!">
-              Solusi digital untuk bisnis anda.
-            </h1>
+            <h1 className="leading-[1.2]">Solusi digital untuk bisnis anda.</h1>
           </div>
 
-          <Link href="#project" className="flex gap-2 text-xl lg:text-lg">
-            Lihat Karya Kami <ChevronDownCircleIcon />
+          <Link href="#project" className="flex gap-2">
+            Lihat Karya Kami
+            <ChevronDownCircleIcon />
           </Link>
         </div>
-        <div className="relative max-w-lg lg:max-w-full mx-auto">
-          <Lottie animationData={animation} loop className="w-full h-auto" />
+
+        {/* Hero Animation */}
+        <div className="relative mx-auto max-w-lg lg:max-w-full">
+          <Lottie animationData={animation} loop className="h-auto w-full" />
         </div>
       </div>
     </section>
