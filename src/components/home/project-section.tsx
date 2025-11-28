@@ -58,7 +58,7 @@ export const ProjectSection = () => {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="rounded-2xl object-cover"
+                    className="rounded-xl object-cover"
                   />
                 </CardContent>
               </Link>
