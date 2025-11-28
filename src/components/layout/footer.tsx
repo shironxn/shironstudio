@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground gap-2 py-4">
       <div className="container flex flex-col md:flex-row text-center justify-center items-center md:text-start md:justify-between gap-2">
-        <Logo />
+        <Logo variant="light" />
         <p className="text-primary-foreground text-sm font-medium">
           © {new Date().getFullYear()} Shiron Studio. All rights reserved.
         </p>

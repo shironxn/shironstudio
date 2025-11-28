@@ -32,7 +32,7 @@ export const NavigationSheet = () => {
       <SheetContent className="h-full w-full max-w-full py-8" side="top">
         <div className="container relative h-full">
           <div>
-            <Logo />
+            <Logo variant="dark" />
             <NavMenu
               props={{
                 orientation: "vertical",

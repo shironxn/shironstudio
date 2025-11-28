@@ -23,7 +23,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transistion-all duration-300 w-full ${isScrolled ? "bg-background/95 backdrop-blur-lg shadow py-4" : "bg-transparent py-8"}`}
     >
       <div className="container h-full flex items-center justify-between gap-8">
-        <Logo />
+        <Logo variant="dark" />
 
         <div className="flex items-center gap-3">
           <Button size="lg" variant="accent" asChild>
