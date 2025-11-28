@@ -14,10 +14,10 @@ const ContactSection = () => {
         {/* Contact Info */}
         <div className="flex flex-col justify-between gap-8">
           <div className="space-y-4">
-            <h2>Hubungi Kami</h2>
+            <h2>Siap Naikin Level Bisnis Anda?</h2>
             <p>
-              Jangan ragu untuk menghubungi kami. Kami siap membantu Anda untuk
-              membangun website modern dan efisien tanpa biaya besar.
+              Ceritain apa yang ingin Anda bangun — kami bantu wujudkan jadi
+              solusi digital yang efektif dan profesional.
             </p>
           </div>
 

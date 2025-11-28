@@ -38,10 +38,9 @@ const AboutSection = () => {
       <div className="mx-auto max-w-2xl space-y-4 md:text-center">
         <h2>Tentang Kami</h2>
         <p>
-          Studio kecil berbasis freelance yang fokus membantu usaha kecil
-          memiliki website modern, cepat, dan efisien tanpa biaya besar. Kami
-          percaya setiap bisnis, sekecil apapun, berhak tampil profesional di
-          dunia digital.
+          Shiron Studio adalah studio kecil yang bantu UMKM tampil profesional
+          di dunia digital. Kami percaya setiap bisnis, sekecil apa pun, berhak
+          terlihat profesional dan punya identitas digital yang kuat.
         </p>
       </div>
 

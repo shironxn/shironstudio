@@ -20,11 +20,10 @@ const services = [
       "Landing page profesional untuk branding, promosi produk, atau portofolio dengan tampilan modern dan performa cepat.",
     features: [
       "1 Halaman landing page premium",
-      "Hosting GRATIS selama proyek",
+      "Hosting GRATIS",
       "Desain responsif (mobile & desktop)",
       "Optimasi SEO dasar",
-      "Formulir kontak (email/WA)",
-      "Integrasi WhatsApp, media sosial, atau CTA lainnya",
+      "Integrasi WhatsApp, media sosial, atau lainnya",
       "Warna, tipografi, dan gaya disesuaikan brand",
       "Kecepatan website teroptimasi",
       "Deployment & konfigurasi selesai",
@@ -34,7 +33,6 @@ const services = [
       "Maintenance bulanan / tahunan",
       "Dashboard admin / CMS",
       "Fitur backend kompleks",
-      "Halaman tambahan (bisa add-on)",
     ],
   },
   {
@@ -74,8 +72,8 @@ const ServiceSection = () => {
       <div className="mx-auto max-w-2xl space-y-4 md:text-center">
         <h2>Yang Kami Tawarkan</h2>
         <p>
-          Solusi digital modern untuk bisnis skala kecil. Layanan kami dibuat
-          dengan fokus pada kualitas, kecepatan, dan hasil yang konsisten.
+          Solusi digital lengkap untuk mengembangkan bisnis Anda—lebih cepat,
+          lebih stabil, dan lebih siap bersaing.
         </p>
       </div>
 

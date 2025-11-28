@@ -38,11 +38,10 @@ export const ProjectSection = () => {
       <div className="container space-y-12 md:space-y-16">
         {/* Header Section */}
         <div className="mx-auto max-w-2xl space-y-4 md:text-center">
-          <h2>Projek Kami</h2>
+          <h2>Portofolio</h2>
           <p>
-            Beberapa contoh pekerjaan dan project digital yang telah kami buat
-            untuk menunjukkan kualitas, konsistensi, dan pendekatan minimalis
-            kami.
+            Beberapa proyek yang sudah kami bantu untuk naik level—mulai dari
+            website, branding, hingga solusi digital yang lebih profesional.
           </p>
         </div>
 
