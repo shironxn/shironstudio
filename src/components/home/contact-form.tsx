@@ -157,10 +157,7 @@ const ContactForm = () => {
         />
 
         {/* SUBMIT BUTTON */}
-        <Button
-          type="submit"
-          className="mt-4 bg-primary text-primary-foreground px-4 py-2 rounded-md"
-        >
+        <Button type="submit" size="lg">
           Kirim Pesan
         </Button>
       </FieldGroup>

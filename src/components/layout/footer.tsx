@@ -12,13 +12,13 @@ const socialMedia = [
 
 export const Footer = () => {
   return (
-    <footer className="gap-2 border-t py-4">
+    <footer className="bg-primary text-primary-foreground gap-2 py-4">
       <div className="container flex flex-col md:flex-row text-center justify-center items-center md:text-start md:justify-between gap-2">
         <Logo />
-        <p className="text-sm">
+        <p className="text-primary-foreground text-sm font-medium">
           © {new Date().getFullYear()} Shiron Studio. All rights reserved.
         </p>
-        <div className="text-muted-foreground">
+        <div className="mt-4 md:mt-0">
           {socialMedia.map((item, index) => (
             <Link key={index} href={item.href}>
               <item.icon />

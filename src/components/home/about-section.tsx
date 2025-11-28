@@ -32,7 +32,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="container space-y-12 py-16 md:py-24 lg:py-32"
+      className="container space-y-16 py-16 md:py-24 lg:py-32"
     >
       {/* Header Section */}
       <div className="mx-auto max-w-2xl space-y-4 md:text-center">
@@ -48,14 +48,19 @@ const AboutSection = () => {
       {/* Values Grid */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {values.map((item, index) => (
-          <Card key={index} className="border-none p-0 shadow-none">
-            <CardContent className="p-0">
-              <item.icon className="h-8 w-8 text-primary" />
+          <Card
+            key={index}
+            className="bg-primary text-primary-foreground border-none shadow-none"
+          >
+            <CardContent>
+              <item.icon className="h-8 w-8 text-accent" />
             </CardContent>
 
-            <CardHeader className="p-0">
+            <CardHeader>
               <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
+              <CardDescription className="text-primary-foreground">
+                {item.description}
+              </CardDescription>
             </CardHeader>
           </Card>
         ))}
