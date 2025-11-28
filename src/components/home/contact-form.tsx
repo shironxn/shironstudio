@@ -157,7 +157,7 @@ const ContactForm = () => {
         />
 
         {/* SUBMIT BUTTON */}
-        <Button type="submit" size="lg">
+        <Button type="submit" size="lg" variant="accent">
           Kirim Pesan
         </Button>
       </FieldGroup>
