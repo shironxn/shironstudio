@@ -20,7 +20,7 @@ export const Footer = () => {
         </p>
         <div className="mt-4 md:mt-0">
           {socialMedia.map((item, index) => (
-            <Link key={index} href={item.href}>
+            <Link key={index} href={item.href} target="_blank">
               <item.icon />
             </Link>
           ))}

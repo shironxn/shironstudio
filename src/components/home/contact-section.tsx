@@ -25,6 +25,7 @@ const ContactSection = () => {
             <Link
               href={`https://wa.me/${contact.phoneNumber.replaceAll(" ", "")}`}
               className="flex gap-2 hover:underline"
+              target="_blank"
             >
               <PhoneIcon className="h-5 w-5" />
               <p>{contact.phoneNumber}</p>
@@ -33,6 +34,7 @@ const ContactSection = () => {
             <Link
               href={`mailto:${contact.email}`}
               className="flex gap-2 hover:underline"
+              target="_blank"
             >
               <MailIcon className="h-5 w-5" />
               <p>{contact.email}</p>
