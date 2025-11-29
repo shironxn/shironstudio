@@ -36,7 +36,7 @@ export const NavigationSheet = () => {
             <NavMenu
               props={{
                 orientation: "vertical",
-                className: "mt-8 md:mt-16 lg:mt-24 [&>div]:h-full",
+                className: "mt-8 md:mt-16 lg:mt-20 [&>div]:h-full",
               }}
               setIsMobileMenuOpen={setIsMobileMenuOpen}
             />

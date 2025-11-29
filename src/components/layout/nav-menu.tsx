@@ -28,7 +28,7 @@ export const NavMenu = ({
           <NavigationMenuItem key={index}>
             <NavigationMenuLink
               asChild
-              className="font-medium text-4xl md:text-6xl"
+              className="font-semibold font-syne text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
             >
               <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)}>
                 {item.name}
