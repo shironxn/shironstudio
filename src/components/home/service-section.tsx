@@ -12,10 +12,6 @@ const services = [
   {
     icon: GlobeIcon,
     title: "Website Landing Page",
-    price: "Rp 300.000",
-    originalPrice: "Rp 600.000",
-    discountUntil: "10 Desember 2025",
-    duration: "3–5 hari kerja",
     description:
       "Landing page profesional untuk branding, promosi produk, atau portofolio dengan tampilan modern dan performa cepat.",
     features: [
@@ -38,10 +34,6 @@ const services = [
   {
     icon: VideoIcon,
     title: "Video Editing",
-    price: "Rp 130.000 – 500.000",
-    originalPrice: "",
-    discountUntil: "",
-    duration: "-",
     description:
       "Editing video profesional untuk konten TikTok, Instagram, Reels, YouTube, atau materi promosi brand Anda.",
     features: [
@@ -87,32 +79,8 @@ const ServiceSection = () => {
                 <item.icon className="h-7 w-7 text-primary" />
               </div>
 
-              {/* Discount Badge */}
-              {item.originalPrice && item.discountUntil && (
-                <Badge>Diskon sampai {item.discountUntil}</Badge>
-              )}
-
               {/* Title */}
               <CardTitle>{item.title}</CardTitle>
-
-              {/* Price */}
-              <div className="space-y-1">
-                {item.originalPrice ? (
-                  <>
-                    <p className="line-through text-muted-foreground">
-                      {item.originalPrice}
-                    </p>
-                    <p className="font-bold text-primary">{item.price}</p>
-                  </>
-                ) : (
-                  <p className="font-bold text-primary">{item.price}</p>
-                )}
-              </div>
-
-              {/* Duration */}
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <span>⏱️ {item.duration}</span>
-              </div>
 
               {/* Description */}
               <CardDescription>{item.description}</CardDescription>
